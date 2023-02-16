@@ -1,0 +1,17 @@
+<div class="form-header">
+    <!--
+        #myInput: referencia a la variable del component
+        keyup.enter: evento al clickear Enter
+        doSearch: llamada a la funcion doSearch del componente search
+        myInput.value: es el texto que inserto en el control textinput
+    -->
+    <input #myInput type="text" 
+           placeholder="Search for products ..." 
+           class="au-input au-input-xl" 
+           (keyup.enter)="doSearch(myInput.value)"
+           />
+
+    <button (click)="doSearch(myInput.value)" class="au-btn-submit">
+        Search
+    </button>
+</div>
